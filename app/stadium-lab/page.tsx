@@ -4,7 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { FlaskConical, Plus, FileText, Layout, Clock, CheckCircle2, PlayCircle } from "lucide-react"
+import { FlaskConical, Plus, FileText, Layout, Clock, CheckCircle2, PlayCircle, Target } from "lucide-react"
 import Link from "next/link"
 
 export default function StadiumLabPage() {
