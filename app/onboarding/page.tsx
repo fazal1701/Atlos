@@ -22,6 +22,7 @@ const sports = [
   "Hockey",
   "Wrestling",
   "Golf",
+  "Formula 1 (F1)",
   "Other",
 ]
 
@@ -99,50 +100,50 @@ export default function OnboardingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-accent/5 flex items-center justify-center p-4">
-      <Card className="w-full max-w-3xl p-8 lg:p-12 shadow-lg">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center p-4">
+      <Card className="w-full max-w-3xl p-8 lg:p-12 shadow-2xl border-2 border-primary/10 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm">
         {/* Header */}
-        <div className="flex items-center gap-3 mb-8">
-          <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-            <Trophy className="w-6 h-6 text-primary" />
+        <div className="flex items-center gap-4 mb-10 pb-6 border-b border-border/50">
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary via-purple-600 to-purple-700 flex items-center justify-center shadow-lg">
+            <Trophy className="w-8 h-8 text-white" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-foreground">Atlos Platform</h1>
-            <p className="text-sm text-foreground/70">Your path to success starts here</p>
+            <h1 className="text-3xl font-bold text-foreground bg-gradient-to-r from-primary via-purple-600 to-purple-700 bg-clip-text text-transparent">Atlos Platform</h1>
+            <p className="text-sm text-foreground/70 font-medium mt-1">Your path to success starts here</p>
           </div>
         </div>
 
         {/* Progress Bar */}
-        <div className="mb-10">
-          <div className="flex justify-between mb-3">
-            <span className="text-sm font-medium">Step {step} of 3</span>
-            <span className="text-sm text-muted-foreground">{Math.round((step / 3) * 100)}% Complete</span>
+        <div className="mb-12">
+          <div className="flex justify-between mb-4">
+            <span className="text-sm font-semibold text-foreground">Step {step} of 3</span>
+            <span className="text-sm font-medium text-primary">{Math.round((step / 3) * 100)}% Complete</span>
           </div>
-          <div className="h-3 bg-muted rounded-full overflow-hidden">
+          <div className="h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden shadow-inner">
             <div
-              className="h-full bg-primary transition-all duration-500 ease-out"
+              className="h-full bg-gradient-to-r from-primary via-purple-600 to-purple-700 transition-all duration-500 ease-out shadow-lg"
               style={{ width: `${(step / 3) * 100}%` }}
             />
           </div>
 
           {/* Step Indicators */}
-          <div className="flex justify-between mt-4">
+          <div className="flex justify-between mt-6">
             {[1, 2, 3].map((s) => (
-              <div key={s} className="flex items-center gap-2">
+              <div key={s} className="flex items-center gap-3">
                 <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-colors ${
+                  className={`w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold transition-all duration-300 ${
                     s < step
-                      ? "bg-primary text-primary-foreground"
+                      ? "bg-gradient-to-br from-primary to-purple-700 text-white shadow-lg scale-105"
                       : s === step
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-muted text-muted-foreground"
+                        ? "bg-gradient-to-br from-primary to-purple-700 text-white shadow-lg scale-110 ring-4 ring-primary/20"
+                        : "bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-600"
                   }`}
                 >
                   {s < step ? <CheckCircle2 className="w-5 h-5" /> : s}
                 </div>
                 <span
-                  className={`text-xs font-medium hidden sm:inline ${
-                    s <= step ? "text-foreground" : "text-muted-foreground"
+                  className={`text-sm font-semibold hidden sm:inline transition-colors ${
+                    s <= step ? "text-foreground" : "text-slate-400 dark:text-slate-600"
                   }`}
                 >
                   {s === 1 ? "About You" : s === 2 ? "Your Sport" : "Career Path"}

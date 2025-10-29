@@ -114,6 +114,38 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Enhanced Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+    font-feature-settings: "ss01" 1, "ss02" 1;
+  }
+
+  h1 {
+    @apply text-4xl lg:text-5xl;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl;
+    letter-spacing: -0.015em;
+  }
+
+  h3 {
+    @apply text-2xl lg:text-3xl;
+    letter-spacing: -0.01em;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Better focus states */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary/50 ring-offset-2 ring-offset-background;
   }
 }

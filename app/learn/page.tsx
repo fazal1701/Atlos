@@ -28,9 +28,9 @@ export default function LearnPage() {
 
       <div className="container mx-auto px-4 py-8">
         {/* Page Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2">Learning Modules</h1>
-          <p className="text-muted-foreground">Explore courses designed to advance your career in sports</p>
+        <div className="mb-10">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary via-purple-600 to-purple-700 bg-clip-text text-transparent">Learning Modules</h1>
+          <p className="text-foreground/70 text-lg">Explore courses designed to advance your career in sports</p>
         </div>
 
         {/* Search and Filter */}
@@ -69,6 +69,8 @@ export default function LearnPage() {
                   <img src="/sports/baseball-field.svg" alt="Baseball" className="absolute inset-0 w-full h-full object-cover opacity-30" />
                 ) : module.title.toLowerCase().includes('soccer') || module.title.toLowerCase().includes('goal') ? (
                   <img src="/sports/soccer-field.svg" alt="Soccer" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+                ) : module.title.toLowerCase().includes('formula') || module.title.toLowerCase().includes('f1') || module.title.toLowerCase().includes('race') ? (
+                  <img src="/sports/f1-track.svg" alt="Formula 1" className="absolute inset-0 w-full h-full object-cover opacity-40" />
                 ) : null}
 
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/5 to-transparent">

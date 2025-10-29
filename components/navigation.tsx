@@ -183,17 +183,17 @@ export function Navigation() {
   const [mobileOpen, setMobileOpen] = React.useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
+    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-950/70 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo - Enhanced Atlos Platform Branding */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary via-primary to-purple-600 text-primary-foreground font-black text-xl shadow-lg group-hover:shadow-xl transition-all group-hover:scale-105">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-primary via-purple-600 to-purple-700 text-white font-black text-xl shadow-lg group-hover:shadow-xl transition-all group-hover:scale-105 group-hover:rotate-3">
               A
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg leading-none bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">Atlos</span>
-              <span className="text-[10px] text-muted-foreground leading-none font-medium">Platform</span>
+              <span className="font-bold text-xl leading-none bg-gradient-to-r from-primary via-purple-600 to-purple-700 bg-clip-text text-transparent">Atlos</span>
+              <span className="text-[10px] text-foreground/60 leading-none font-semibold tracking-wider uppercase">Platform</span>
             </div>
           </Link>
 

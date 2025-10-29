@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#1a1a2e"/>
+  
+  <!-- Track outer boundary -->
+  <path d="M 150 300 Q 150 150, 300 150 L 500 150 Q 650 150, 650 300 Q 650 450, 500 450 L 300 450 Q 150 450, 150 300 Z" 
+        fill="none" stroke="#e74c3c" stroke-width="8" stroke-dasharray="20,10"/>
+  
+  <!-- Track inner boundary -->
+  <path d="M 200 300 Q 200 200, 300 200 L 500 200 Q 600 200, 600 300 Q 600 400, 500 400 L 300 400 Q 200 400, 200 300 Z" 
+        fill="none" stroke="#ffffff" stroke-width="6" stroke-dasharray="15,8"/>
+  
+  <!-- Racing line (optimal path) -->
+  <path d="M 175 300 Q 175 175, 300 175 L 500 175 Q 625 175, 625 300 Q 625 425, 500 425 L 300 425 Q 175 425, 175 300 Z" 
+        fill="none" stroke="#8B5CF6" stroke-width="4" stroke-dasharray="10,5" opacity="0.8"/>
+  
+  <!-- Start/Finish line -->
+  <rect x="145" y="280" width="15" height="40" fill="#ffffff"/>
+  <rect x="145" y="280" width="15" height="8" fill="#000000"/>
+  <rect x="145" y="296" width="15" height="8" fill="#000000"/>
+  <rect x="145" y="312" width="15" height="8" fill="#000000"/>
+  
+  <!-- DRS Zone markers -->
+  <rect x="480" y="145" width="60" height="8" fill="#10B981" opacity="0.7"/>
+  <text x="510" y="140" font-family="Arial, sans-serif" font-size="12" fill="#10B981" text-anchor="middle" font-weight="bold">DRS</text>
+  
+  <!-- Sector markers -->
+  <circle cx="300" cy="150" r="12" fill="#FFD700" opacity="0.8"/>
+  <text x="300" y="155" font-family="Arial, sans-serif" font-size="14" fill="#1a1a2e" text-anchor="middle" font-weight="bold">S1</text>
+  
+  <circle cx="650" cy="300" r="12" fill="#FFD700" opacity="0.8"/>
+  <text x="650" y="305" font-family="Arial, sans-serif" font-size="14" fill="#1a1a2e" text-anchor="middle" font-weight="bold">S2</text>
+  
+  <circle cx="300" cy="450" r="12" fill="#FFD700" opacity="0.8"/>
+  <text x="300" y="455" font-family="Arial, sans-serif" font-size="14" fill="#1a1a2e" text-anchor="middle" font-weight="bold">S3</text>
+  
+  <!-- F1 Car (simplified) -->
+  <g transform="translate(160, 290)">
+    <!-- Car body -->
+    <ellipse cx="0" cy="0" rx="25" ry="12" fill="#e74c3c"/>
+    <ellipse cx="0" cy="0" rx="20" ry="9" fill="#c0392b"/>
+    <!-- Front wing -->
+    <rect x="-30" y="-3" width="8" height="6" fill="#2c3e50" rx="2"/>
+    <!-- Rear wing -->
+    <rect x="22" y="-5" width="6" height="10" fill="#2c3e50" rx="1"/>
+    <!-- Wheels -->
+    <circle cx="-15" cy="-10" r="4" fill="#34495e"/>
+    <circle cx="-15" cy="10" r="4" fill="#34495e"/>
+    <circle cx="15" cy="-10" r="4" fill="#34495e"/>
+    <circle cx="15" cy="10" r="4" fill="#34495e"/>
+    <!-- Speed lines -->
+    <line x1="-40" y1="-2" x2="-50" y2="-2" stroke="#8B5CF6" stroke-width="2" opacity="0.6"/>
+    <line x1="-40" y1="2" x2="-50" y2="2" stroke="#8B5CF6" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <!-- Telemetry data visualization -->
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="180" height="100" fill="#2c3e50" opacity="0.9" rx="8"/>
+    <text x="90" y="20" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">TELEMETRY</text>
+    
+    <!-- Speed -->
+    <text x="10" y="40" font-family="Arial, sans-serif" font-size="11" fill="#10B981" font-weight="bold">SPEED:</text>
+    <text x="70" y="40" font-family="monospace" font-size="11" fill="#ffffff">312 km/h</text>
+    
+    <!-- RPM -->
+    <text x="10" y="58" font-family="Arial, sans-serif" font-size="11" fill="#FFD700" font-weight="bold">RPM:</text>
+    <text x="70" y="58" font-family="monospace" font-size="11" fill="#ffffff">12,450</text>
+    
+    <!-- Gear -->
+    <text x="10" y="76" font-family="Arial, sans-serif" font-size="11" fill="#8B5CF6" font-weight="bold">GEAR:</text>
+    <text x="70" y="76" font-family="monospace" font-size="11" fill="#ffffff">7</text>
+    
+    <!-- Throttle bar -->
+    <rect x="10" y="82" width="160" height="8" fill="#34495e" rx="4"/>
+    <rect x="10" y="82" width="140" height="8" fill="#10B981" rx="4"/>
+  </g>
+  
+  <!-- Lap time display -->
+  <g transform="translate(570, 50)">
+    <rect x="0" y="0" width="180" height="80" fill="#2c3e50" opacity="0.9" rx="8"/>
+    <text x="90" y="20" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">LAP TIMES</text>
+    
+    <text x="10" y="40" font-family="Arial, sans-serif" font-size="11" fill="#10B981" font-weight="bold">BEST:</text>
+    <text x="70" y="40" font-family="monospace" font-size="11" fill="#10B981">1:23.456</text>
+    
+    <text x="10" y="58" font-family="Arial, sans-serif" font-size="11" fill="#FFD700" font-weight="bold">LAST:</text>
+    <text x="70" y="58" font-family="monospace" font-size="11" fill="#ffffff">1:24.123</text>
+    
+    <text x="10" y="72" font-family="Arial, sans-serif" font-size="10" fill="#8B5CF6">Δ +0.667s</text>
+  </g>
+  
+  <!-- Tire strategy -->
+  <g transform="translate(50, 480)">
+    <rect x="0" y="0" width="200" height="70" fill="#2c3e50" opacity="0.9" rx="8"/>
+    <text x="100" y="18" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">TIRE STRATEGY</text>
+    
+    <!-- Soft tire -->
+    <circle cx="30" cy="45" r="15" fill="#e74c3c"/>
+    <text x="30" y="50" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">S</text>
+    <text x="30" y="65" font-family="Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">Laps 1-18</text>
+    
+    <!-- Medium tire -->
+    <circle cx="100" cy="45" r="15" fill="#FFD700"/>
+    <text x="100" y="50" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e" text-anchor="middle" font-weight="bold">M</text>
+    <text x="100" y="65" font-family="Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">Laps 19-45</text>
+    
+    <!-- Hard tire -->
+    <circle cx="170" cy="45" r="15" fill="#ecf0f1"/>
+    <text x="170" y="50" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e" text-anchor="middle" font-weight="bold">H</text>
+    <text x="170" y="65" font-family="Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">Laps 46-58</text>
+  </g>
+  
+  <!-- Performance graph -->
+  <g transform="translate(550, 450)">
+    <rect x="0" y="0" width="200" height="100" fill="#2c3e50" opacity="0.9" rx="8"/>
+    <text x="100" y="18" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">PERFORMANCE</text>
+    
+    <!-- Graph axes -->
+    <line x1="20" y1="85" x2="180" y2="85" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    <line x1="20" y1="30" x2="20" y2="85" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+    <!-- Performance line -->
+    <polyline points="20,70 40,65 60,55 80,50 100,48 120,52 140,58 160,65 180,70" 
+              fill="none" stroke="#8B5CF6" stroke-width="3"/>
+    
+    <!-- Data points -->
+    <circle cx="20" cy="70" r="3" fill="#8B5CF6"/>
+    <circle cx="60" cy="55" r="3" fill="#10B981"/>
+    <circle cx="100" cy="48" r="3" fill="#FFD700"/>
+    <circle cx="140" cy="58" r="3" fill="#e74c3c"/>
+    <circle cx="180" cy="70" r="3" fill="#8B5CF6"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="580" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">FORMULA 1 ANALYTICS</text>
+</svg>
+
