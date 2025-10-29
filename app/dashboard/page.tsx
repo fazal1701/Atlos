@@ -55,7 +55,7 @@ export default function DashboardPage() {
 
       <div className="container mx-auto px-4 py-8">
         {/* Welcome Section - Enhanced Hero */}
-        <div className="mb-8 rounded-xl bg-gradient-to-r from-primary/10 via-primary/5 to-background p-8 border border-primary/20 relative overflow-hidden">
+        <div className="mb-8 rounded-2xl bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 p-8 border-2 border-primary/20 relative overflow-hidden shadow-xl">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute inset-0" style={{
@@ -65,8 +65,8 @@ export default function DashboardPage() {
 
           <div className="flex items-center justify-between relative z-10">
             <div className="flex-1">
-              <h1 className="text-4xl font-bold mb-2">Welcome back, {profile.name.split(" ")[0]}! 👋</h1>
-              <p className="text-muted-foreground text-lg mb-4">
+              <h1 className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary via-purple-600 to-purple-700 bg-clip-text text-transparent">Welcome back, {profile.name.split(" ")[0]}! 👋</h1>
+              <p className="text-foreground/70 text-lg mb-4 font-medium">
                 {profile.sport} • {profile.position} • {careerPathName}
               </p>
               <div className="flex gap-4 mt-4">
@@ -281,6 +281,104 @@ export default function DashboardPage() {
               </CardContent>
             </Card>
 
+            {/* Project-Based Learning Section */}
+            <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-background to-accent/5">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-purple-700 flex items-center justify-center shadow-lg">
+                    <Target className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-xl">Active Projects</CardTitle>
+                    <CardDescription>Real-world, hands-on learning experiences</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {/* Project 1 - Basketball Shot Analysis */}
+                <Link href="/stadium-lab" className="block group">
+                  <div className="p-4 rounded-xl border-2 border-border hover:border-primary/50 transition-all bg-white dark:bg-slate-900 hover:shadow-lg">
+                    <div className="flex gap-4">
+                      <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-gradient-to-br from-primary/10 to-accent/10">
+                        <img src="/projects/project-analytics.svg" alt="Project" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-start justify-between mb-2">
+                          <div>
+                            <h4 className="font-bold text-base group-hover:text-primary transition-colors">Basketball Shot Chart Analysis</h4>
+                            <p className="text-sm text-foreground/70">Analyze 500+ shots to identify patterns and improve accuracy</p>
+                          </div>
+                          <Badge className="bg-primary">Active</Badge>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="flex items-center justify-between text-xs">
+                            <span className="text-foreground/60 font-medium">Progress</span>
+                            <span className="font-bold text-primary">65%</span>
+                          </div>
+                          <Progress value={65} className="h-2" />
+                          <div className="flex items-center gap-4 text-xs text-foreground/60">
+                            <span className="flex items-center gap-1">
+                              <Clock className="w-3 h-3" />
+                              2 weeks left
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <Users className="w-3 h-3" />
+                              Team Project
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+
+                {/* Project 2 - Video Analysis */}
+                <Link href="/videos" className="block group">
+                  <div className="p-4 rounded-xl border-2 border-border hover:border-primary/50 transition-all bg-white dark:bg-slate-900 hover:shadow-lg">
+                    <div className="flex gap-4">
+                      <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-gradient-to-br from-green-500/10 to-blue-500/10">
+                        <img src="/projects/real-world-project.svg" alt="Project" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-start justify-between mb-2">
+                          <div>
+                            <h4 className="font-bold text-base group-hover:text-primary transition-colors">Game Film Breakdown Project</h4>
+                            <p className="text-sm text-foreground/70">Create professional video analysis for college recruiters</p>
+                          </div>
+                          <Badge className="bg-green-600">In Review</Badge>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="flex items-center justify-between text-xs">
+                            <span className="text-foreground/60 font-medium">Progress</span>
+                            <span className="font-bold text-green-600">90%</span>
+                          </div>
+                          <Progress value={90} className="h-2" />
+                          <div className="flex items-center gap-4 text-xs text-foreground/60">
+                            <span className="flex items-center gap-1">
+                              <Video className="w-3 h-3" />
+                              8 clips analyzed
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <Award className="w-3 h-3" />
+                              Portfolio Ready
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+
+                {/* Start New Project Button */}
+                <Button className="w-full" variant="outline" asChild>
+                  <Link href="/learn">
+                    <Target className="mr-2 w-4 h-4" />
+                    Browse More Projects
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+
             {/* Recommended Modules */}
             <Card>
               <CardHeader>
@@ -327,41 +425,54 @@ export default function DashboardPage() {
           {/* Sidebar */}
           <div className="space-y-6">
             {/* Career Progress */}
-            <Card>
+            <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-background">
               <CardHeader>
-                <CardTitle>Career Progress</CardTitle>
-                <CardDescription>{careerPathName}</CardDescription>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-purple-700 flex items-center justify-center shadow-lg">
+                    <Target className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Career Progress</CardTitle>
+                    <CardDescription className="text-xs">{careerPathName}</CardDescription>
+                  </div>
+                </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div>
-                  <div className="flex justify-between text-sm mb-2">
-                    <span className="text-muted-foreground">Overall Progress</span>
-                    <span className="font-semibold">{overallProgress}%</span>
+                <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-border">
+                  <div className="flex justify-between text-sm mb-3">
+                    <span className="text-foreground/70 font-medium">Overall Progress</span>
+                    <span className="font-bold text-primary text-lg">{overallProgress}%</span>
                   </div>
-                  <Progress value={overallProgress} />
+                  <Progress value={overallProgress} className="h-3" />
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-2">
                   {careerPath?.modules.map((moduleId, index) => {
                     const module = modules.find((m) => m.id === moduleId)
                     if (!module) return null
 
                     return (
-                      <div key={index} className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-                          <span className="text-xs font-bold text-primary-foreground">{index + 1}</span>
+                      <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-slate-900 border border-border hover:border-primary/50 transition-all">
+                        <div className={`w-9 h-9 rounded-xl flex items-center justify-center shadow-md ${
+                          module.status === "completed"
+                            ? "bg-gradient-to-br from-green-500 to-emerald-600"
+                            : module.status === "in-progress"
+                            ? "bg-gradient-to-br from-primary to-purple-700"
+                            : "bg-slate-200 dark:bg-slate-700"
+                        }`}>
+                          <span className="text-xs font-bold text-white">{index + 1}</span>
                         </div>
-                        <div className="flex-1">
-                          <p className="text-sm font-medium">{module.title}</p>
-                          <p className="text-xs text-muted-foreground">
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-semibold truncate">{module.title}</p>
+                          <p className="text-xs text-foreground/60">
                             {module.status === "completed"
-                              ? "Complete"
+                              ? "✓ Complete"
                               : module.status === "in-progress"
-                                ? "In Progress"
-                                : "Locked"}
+                                ? "⚡ In Progress"
+                                : "🔒 Locked"}
                           </p>
                         </div>
-                        {module.status === "completed" && <Award className="w-5 h-5 text-primary" />}
+                        {module.status === "completed" && <Award className="w-5 h-5 text-green-600 flex-shrink-0" />}
                       </div>
                     )
                   })}
@@ -370,36 +481,41 @@ export default function DashboardPage() {
             </Card>
 
             {/* Learning Progress Chart */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Your Learning Journey</CardTitle>
-                <CardDescription>Weekly progress over time</CardDescription>
+            <Card className="overflow-hidden">
+              <CardHeader className="bg-gradient-to-r from-primary/10 to-accent/10">
+                <CardTitle className="text-lg">Your Learning Journey</CardTitle>
+                <CardDescription className="text-xs">Weekly progress over time</CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="pt-6">
                 <img
                   src="/charts/progress-chart.svg"
                   alt="Learning Progress Chart"
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-lg shadow-sm"
                 />
               </CardContent>
             </Card>
 
             {/* Recent Achievements */}
-            <Card>
+            <Card className="border-2 border-yellow-200 dark:border-yellow-900 bg-gradient-to-br from-yellow-50 to-white dark:from-yellow-950/20 dark:to-background">
               <CardHeader>
-                <CardTitle>Recent Achievements</CardTitle>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center shadow-lg">
+                    <Trophy className="w-5 h-5 text-white" />
+                  </div>
+                  <CardTitle className="text-lg">Recent Achievements</CardTitle>
+                </div>
               </CardHeader>
               <CardContent className="space-y-3">
                 {[
-                  { title: "Level 3 Master", badge: "/badges/level-3.svg", date: "2 days ago" },
-                  { title: "Level 2 Achiever", badge: "/badges/level-2.svg", date: "1 week ago" },
-                  { title: "Level 1 Starter", badge: "/badges/level-1.svg", date: "2 weeks ago" },
+                  { title: "Level 3 Master", badge: "/badges/level-3.svg", date: "2 days ago", color: "from-yellow-500/20 to-orange-500/20" },
+                  { title: "Level 2 Achiever", badge: "/badges/level-2.svg", date: "1 week ago", color: "from-slate-500/20 to-slate-400/20" },
+                  { title: "Level 1 Starter", badge: "/badges/level-1.svg", date: "2 weeks ago", color: "from-amber-700/20 to-amber-600/20" },
                 ].map((achievement, i) => (
-                  <div key={i} className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 hover:border-primary/30 transition-colors">
-                    <img src={achievement.badge} alt={achievement.title} className="w-12 h-12" />
+                  <div key={i} className={`flex items-center gap-3 p-3 rounded-xl bg-gradient-to-br ${achievement.color} border-2 border-border hover:border-primary/50 transition-all hover:scale-105 cursor-pointer shadow-sm`}>
+                    <img src={achievement.badge} alt={achievement.title} className="w-14 h-14 drop-shadow-lg" />
                     <div className="flex-1">
-                      <p className="text-sm font-medium">{achievement.title}</p>
-                      <p className="text-xs text-muted-foreground">{achievement.date}</p>
+                      <p className="text-sm font-bold">{achievement.title}</p>
+                      <p className="text-xs text-foreground/60">{achievement.date}</p>
                     </div>
                   </div>
                 ))}
@@ -407,25 +523,32 @@ export default function DashboardPage() {
             </Card>
 
             {/* Upcoming Events */}
-            <Card>
+            <Card className="border-2 border-blue-200 dark:border-blue-900 bg-gradient-to-br from-blue-50 to-white dark:from-blue-950/20 dark:to-background">
               <CardHeader>
-                <CardTitle>Upcoming Events</CardTitle>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg">
+                    <Users className="w-5 h-5 text-white" />
+                  </div>
+                  <CardTitle className="text-lg">Upcoming Events</CardTitle>
+                </div>
               </CardHeader>
               <CardContent className="space-y-3">
-                <div className="p-3 rounded-lg border border-border">
-                  <div className="flex items-center gap-2 mb-1">
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                    <p className="text-sm font-medium">Live Q&A: Analytics Career</p>
+                <div className="p-4 rounded-xl border-2 border-primary/20 bg-white dark:bg-slate-900 hover:border-primary/50 transition-all cursor-pointer">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
+                    <p className="text-sm font-bold">Live Q&A: Analytics Career</p>
                   </div>
-                  <p className="text-xs text-muted-foreground">Tomorrow at 3:00 PM</p>
+                  <p className="text-xs text-foreground/70 ml-6">📅 Tomorrow at 3:00 PM</p>
+                  <p className="text-xs text-primary font-medium ml-6 mt-1">Join 45 attendees</p>
                 </div>
 
-                <div className="p-3 rounded-lg border border-border">
-                  <div className="flex items-center gap-2 mb-1">
-                    <div className="w-2 h-2 rounded-full bg-accent" />
-                    <p className="text-sm font-medium">Workshop: Video Analysis</p>
+                <div className="p-4 rounded-xl border-2 border-green-200 dark:border-green-900 bg-white dark:bg-slate-900 hover:border-green-500/50 transition-all cursor-pointer">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-3 h-3 rounded-full bg-green-600" />
+                    <p className="text-sm font-bold">Workshop: Video Analysis</p>
                   </div>
-                  <p className="text-xs text-muted-foreground">Friday at 5:00 PM</p>
+                  <p className="text-xs text-foreground/70 ml-6">📅 Friday at 5:00 PM</p>
+                  <p className="text-xs text-green-600 font-medium ml-6 mt-1">Hands-on project included</p>
                 </div>
               </CardContent>
             </Card>

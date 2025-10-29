@@ -84,12 +84,17 @@ export default function VideosPage() {
 
       <div className="container mx-auto px-4 py-8">
         {/* Page Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-10">
           <div>
-            <h1 className="text-4xl font-bold mb-2">Video Library</h1>
-            <p className="text-muted-foreground">Upload and analyze your game footage</p>
+            <h1 className="text-4xl lg:text-5xl font-bold mb-3 bg-gradient-to-r from-primary via-purple-600 to-purple-700 bg-clip-text text-transparent">Video Library</h1>
+            <p className="text-foreground/70 text-lg mb-3">Upload and analyze your game footage</p>
+            <div className="flex items-center gap-2 text-sm">
+              <Badge className="bg-blue-600 text-white">AI-Powered Analysis</Badge>
+              <Badge variant="outline">Frame-by-Frame</Badge>
+              <Badge variant="outline">Performance Metrics</Badge>
+            </div>
           </div>
-          <Button size="lg" asChild>
+          <Button size="lg" className="shadow-lg" asChild>
             <Link href="/videos/upload">
               <Upload className="mr-2 w-5 h-5" />
               Upload Video
@@ -99,50 +104,58 @@ export default function VideosPage() {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <Card>
+          <Card className="border-2 border-purple-200 dark:border-purple-900 bg-gradient-to-br from-purple-50 to-background dark:from-purple-950/20 dark:to-background hover:shadow-lg transition-all">
             <CardContent className="pt-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-muted-foreground">Total Videos</p>
-                  <p className="text-3xl font-bold">{videos.length}</p>
+                  <p className="text-sm text-foreground/70 font-medium mb-1">Total Videos</p>
+                  <p className="text-3xl font-bold text-purple-600">{videos.length}</p>
                 </div>
-                <Video className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center shadow-md">
+                  <Video className="w-6 h-6 text-white" />
+                </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-background hover:shadow-lg transition-all">
             <CardContent className="pt-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-muted-foreground">Analyzed</p>
-                  <p className="text-3xl font-bold">{videos.filter((v) => v.analyzed).length}</p>
+                  <p className="text-sm text-foreground/70 font-medium mb-1">Analyzed</p>
+                  <p className="text-3xl font-bold text-primary">{videos.filter((v) => v.analyzed).length}</p>
                 </div>
-                <BarChart3 className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-purple-700 flex items-center justify-center shadow-md">
+                  <BarChart3 className="w-6 h-6 text-white" />
+                </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="border-2 border-green-200 dark:border-green-900 bg-gradient-to-br from-green-50 to-background dark:from-green-950/20 dark:to-background hover:shadow-lg transition-all">
             <CardContent className="pt-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-muted-foreground">Total Clips</p>
-                  <p className="text-3xl font-bold">{videos.reduce((acc, v) => acc + v.clips, 0)}</p>
+                  <p className="text-sm text-foreground/70 font-medium mb-1">Total Clips</p>
+                  <p className="text-3xl font-bold text-green-600">{videos.reduce((acc, v) => acc + v.clips, 0)}</p>
                 </div>
-                <Play className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-md">
+                  <Play className="w-6 h-6 text-white" />
+                </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="border-2 border-blue-200 dark:border-blue-900 bg-gradient-to-br from-blue-50 to-background dark:from-blue-950/20 dark:to-background hover:shadow-lg transition-all">
             <CardContent className="pt-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-muted-foreground">Watch Time</p>
-                  <p className="text-3xl font-bold">8.2h</p>
+                  <p className="text-sm text-foreground/70 font-medium mb-1">Watch Time</p>
+                  <p className="text-3xl font-bold text-blue-600">8.2h</p>
                 </div>
-                <Clock className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center shadow-md">
+                  <Clock className="w-6 h-6 text-white" />
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -183,24 +196,19 @@ export default function VideosPage() {
               className="overflow-hidden group cursor-pointer hover:border-primary/50 transition-colors"
             >
               <Link href={`/videos/${video.id}`}>
-                {/* Thumbnail - Enhanced with mock video preview */}
-                <div className="aspect-video bg-gradient-to-br from-primary/20 via-primary/10 to-accent/20 relative overflow-hidden">
-                  {/* Mock court/field pattern */}
-                  <div className="absolute inset-0 opacity-10">
-                    <svg className="w-full h-full" viewBox="0 0 400 225">
-                      {/* Basketball court lines */}
-                      <rect x="50" y="20" width="300" height="185" fill="none" stroke="currentColor" strokeWidth="2"/>
-                      <circle cx="200" cy="112.5" r="40" fill="none" stroke="currentColor" strokeWidth="2"/>
-                      <line x1="200" y1="20" x2="200" y2="205" stroke="currentColor" strokeWidth="2"/>
-                      <path d="M 50 112.5 Q 80 112.5 80 82.5 L 80 142.5 Q 80 112.5 50 112.5" fill="none" stroke="currentColor" strokeWidth="2"/>
-                      <path d="M 350 112.5 Q 320 112.5 320 82.5 L 320 142.5 Q 320 112.5 350 112.5" fill="none" stroke="currentColor" strokeWidth="2"/>
-                    </svg>
-                  </div>
+                {/* Thumbnail - Enhanced with actual thumbnail images */}
+                <div className="aspect-video relative overflow-hidden bg-slate-900">
+                  {/* Thumbnail image based on video type */}
+                  <img
+                    src={video.type === "game" ? "/videos/game-thumbnail.svg" : "/videos/practice-thumbnail.svg"}
+                    alt={video.title}
+                    className="w-full h-full object-cover"
+                  />
 
                   {/* Play button overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-                    <div className="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
-                      <Play className="w-10 h-10 text-primary ml-1" fill="currentColor" />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-colors">
+                    <div className="w-20 h-20 rounded-full bg-white/0 group-hover:bg-white/90 flex items-center justify-center group-hover:scale-110 transition-all shadow-lg">
+                      <Play className="w-10 h-10 text-white group-hover:text-primary ml-1 opacity-0 group-hover:opacity-100 transition-opacity" fill="currentColor" />
                     </div>
                   </div>
 

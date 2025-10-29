@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f9fafb"/>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="portfolioGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366F1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:0.05" />
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:0.05" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main portfolio folder -->
+  <path d="M 80 80 L 80 60 L 160 60 L 180 80 L 320 80 L 320 240 L 80 240 Z" fill="url(#portfolioGrad)"/>
+  <path d="M 85 85 L 85 65 L 160 65 L 178 85 L 315 85 L 315 235 L 85 235 Z" fill="#ffffff"/>
+  
+  <!-- Project cards inside -->
+  <!-- Card 1 -->
+  <rect x="100" y="100" width="90" height="60" rx="6" fill="url(#cardGrad1)" stroke="#10B981" stroke-width="2"/>
+  <circle cx="145" cy="120" r="12" fill="#10B981"/>
+  <path d="M 140 120 L 144 124 L 150 116" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <text x="145" y="145" font-family="Arial" font-size="10" fill="#2c3e50" text-anchor="middle" font-weight="bold">Project 1</text>
+  <text x="145" y="155" font-family="Arial" font-size="8" fill="#6b7280" text-anchor="middle">Analytics</text>
+  
+  <!-- Card 2 -->
+  <rect x="210" y="100" width="90" height="60" rx="6" fill="url(#cardGrad2)" stroke="#F59E0B" stroke-width="2"/>
+  <circle cx="255" cy="120" r="12" fill="#F59E0B"/>
+  <path d="M 250 120 L 254 124 L 260 116" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <text x="255" y="145" font-family="Arial" font-size="10" fill="#2c3e50" text-anchor="middle" font-weight="bold">Project 2</text>
+  <text x="255" y="155" font-family="Arial" font-size="8" fill="#6b7280" text-anchor="middle">Video Study</text>
+  
+  <!-- Card 3 -->
+  <rect x="100" y="170" width="90" height="60" rx="6" fill="url(#cardGrad1)" stroke="#8B5CF6" stroke-width="2"/>
+  <circle cx="145" cy="190" r="12" fill="#8B5CF6"/>
+  <path d="M 140 190 L 144 194 L 150 186" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <text x="145" y="215" font-family="Arial" font-size="10" fill="#2c3e50" text-anchor="middle" font-weight="bold">Project 3</text>
+  <text x="145" y="225" font-family="Arial" font-size="8" fill="#6b7280" text-anchor="middle">Research</text>
+  
+  <!-- Card 4 -->
+  <rect x="210" y="170" width="90" height="60" rx="6" fill="url(#cardGrad2)" stroke="#10B981" stroke-width="2"/>
+  <circle cx="255" cy="190" r="12" fill="#10B981"/>
+  <path d="M 250 190 L 254 194 L 260 186" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <text x="255" y="215" font-family="Arial" font-size="10" fill="#2c3e50" text-anchor="middle" font-weight="bold">Project 4</text>
+  <text x="255" y="225" font-family="Arial" font-size="8" fill="#6b7280" text-anchor="middle">Case Study</text>
+  
+  <!-- Achievement stars -->
+  <g transform="translate(330, 90)">
+    <circle cx="0" cy="0" r="20" fill="#FFD700"/>
+    <path d="M 0 -12 L 3 -3 L 12 -3 L 5 3 L 8 12 L 0 6 L -8 12 L -5 3 L -12 -3 L -3 -3 Z" fill="#ffffff"/>
+  </g>
+  
+  <g transform="translate(330, 150)">
+    <circle cx="0" cy="0" r="18" fill="#10B981"/>
+    <path d="M -6 0 L 0 6 L 6 -6" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <g transform="translate(330, 210)">
+    <circle cx="0" cy="0" r="18" fill="#8B5CF6"/>
+    <text x="0" y="6" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">A+</text>
+  </g>
+  
+  <!-- Stats bar at bottom -->
+  <rect x="80" y="250" width="240" height="35" rx="8" fill="#f3f4f6"/>
+  <text x="100" y="268" font-family="Arial" font-size="11" fill="#2c3e50" font-weight="bold">12 Projects</text>
+  <text x="100" y="280" font-family="Arial" font-size="9" fill="#6b7280">Completed</text>
+  
+  <text x="200" y="268" font-family="Arial" font-size="11" fill="#2c3e50" font-weight="bold">8 Awards</text>
+  <text x="200" y="280" font-family="Arial" font-size="9" fill="#6b7280">Earned</text>
+  
+  <text x="280" y="268" font-family="Arial" font-size="11" fill="#2c3e50" font-weight="bold">95%</text>
+  <text x="280" y="280" font-family="Arial" font-size="9" fill="#6b7280">Success Rate</text>
+  
+  <!-- Title -->
+  <text x="200" y="30" font-family="Arial, sans-serif" font-size="18" fill="#2c3e50" text-anchor="middle" font-weight="bold">PORTFOLIO SHOWCASE</text>
+</svg>
+
