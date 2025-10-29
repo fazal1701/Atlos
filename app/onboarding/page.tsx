@@ -107,8 +107,8 @@ export default function OnboardingPage() {
             <Trophy className="w-6 h-6 text-primary" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold">GameSense</h1>
-            <p className="text-sm text-muted-foreground">Your path to success starts here</p>
+            <h1 className="text-2xl font-bold text-foreground">Atlos Platform</h1>
+            <p className="text-sm text-foreground/70">Your path to success starts here</p>
           </div>
         </div>
 

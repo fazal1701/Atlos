@@ -463,17 +463,17 @@ export default function PortfolioPage() {
                   {[
                     {
                       title: "Sports Analytics Fundamentals",
-                      issuer: "GameSense",
+                      issuer: "Atlos Platform",
                       date: "March 2024",
                       verified: true,
                     },
                     {
                       title: "Video Analysis Certification",
-                      issuer: "GameSense",
+                      issuer: "Atlos Platform",
                       date: "February 2024",
                       verified: true,
                     },
-                    { title: "Data Visualization", issuer: "GameSense", date: "January 2024", verified: true },
+                    { title: "Data Visualization", issuer: "Atlos Platform", date: "January 2024", verified: true },
                   ].map((cert, i) => (
                     <div key={i} className="flex items-start gap-3 p-4 rounded-lg border border-border">
                       <Award className="w-8 h-8 text-primary flex-shrink-0" />

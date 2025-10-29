@@ -71,7 +71,7 @@ export default function VideoDetailPage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/dashboard" className="text-2xl font-bold text-primary">
-              GameSense
+              Atlos Platform
             </Link>
             <Button variant="ghost" size="sm" asChild>
               <Link href="/videos">

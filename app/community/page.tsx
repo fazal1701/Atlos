@@ -98,7 +98,7 @@ const events = [
   },
   {
     title: "Career Fair: Sports Industry Opportunities",
-    host: "GameSense Team",
+    host: "Atlos Platform Team",
     date: "Next Monday at 2:00 PM",
     attendees: 256,
     type: "event",
