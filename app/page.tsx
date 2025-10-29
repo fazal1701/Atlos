@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Trophy, Target, TrendingUp, Users } from "lucide-react"
+import { ArrowRight, Trophy, Target, TrendingUp, Users, PlayCircle } from "lucide-react"
 
 export default function LandingPage() {
   return (
@@ -44,39 +44,28 @@ export default function LandingPage() {
               </Button>
             </div>
 
-            {/* Mock Platform Preview */}
+            {/* Mock Platform Preview - Hero Dashboard */}
             <div className="pt-12">
-              <div className="relative rounded-xl border-2 border-primary/20 shadow-2xl overflow-hidden bg-background/50 backdrop-blur-sm">
-                <div className="aspect-video bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 relative">
-                  {/* Mock Dashboard Preview */}
-                  <div className="absolute inset-0 p-8 flex items-center justify-center">
-                    <div className="w-full max-w-3xl space-y-4">
-                      {/* Mock header */}
-                      <div className="h-12 bg-background/80 rounded-lg border border-primary/20 flex items-center px-4 gap-3">
-                        <div className="w-8 h-8 rounded-full bg-primary/20"></div>
-                        <div className="flex-1 h-4 bg-primary/10 rounded"></div>
-                        <div className="w-20 h-4 bg-primary/10 rounded"></div>
-                      </div>
-                      {/* Mock content cards */}
-                      <div className="grid grid-cols-3 gap-4">
-                        {[1, 2, 3].map((i) => (
-                          <div key={i} className="h-24 bg-background/80 rounded-lg border border-primary/20 p-3">
-                            <div className="w-8 h-8 rounded bg-primary/20 mb-2"></div>
-                            <div className="h-2 bg-primary/10 rounded mb-1"></div>
-                            <div className="h-2 bg-primary/10 rounded w-2/3"></div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  {/* Play button overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/10 hover:bg-black/20 transition-colors cursor-pointer">
-                    <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-                      <div className="w-0 h-0 border-l-8 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent ml-1"></div>
-                    </div>
+              <div className="relative rounded-xl border-2 border-primary/20 shadow-2xl overflow-hidden bg-background/50 backdrop-blur-sm group cursor-pointer hover:border-primary/40 transition-all">
+                {/* Hero Dashboard Image */}
+                <img
+                  src="/hero-dashboard.svg"
+                  alt="Atlos Platform Dashboard Preview"
+                  className="w-full h-auto"
+                />
+
+                {/* Play button overlay */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
+                  <div className="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                    <PlayCircle className="w-12 h-12 text-primary" />
                   </div>
                 </div>
               </div>
+
+              {/* Caption */}
+              <p className="text-center mt-4 text-sm text-muted-foreground">
+                Transform your athletic data into career insights with Atlos Platform
+              </p>
             </div>
           </div>
         </div>

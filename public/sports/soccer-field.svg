@@ -1,0 +1,49 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Soccer Field -->
+  <rect width="800" height="600" fill="#10B981"/>
+  
+  <!-- Field Lines -->
+  <g stroke="#FFFFFF" stroke-width="3" fill="none">
+    <!-- Outer boundary -->
+    <rect x="50" y="50" width="700" height="500"/>
+    
+    <!-- Half line -->
+    <line x1="400" y1="50" x2="400" y2="550"/>
+    
+    <!-- Center circle -->
+    <circle cx="400" cy="300" r="80"/>
+    <circle cx="400" cy="300" r="5" fill="#FFFFFF"/>
+    
+    <!-- Left penalty area -->
+    <rect x="50" y="180" width="120" height="240"/>
+    <rect x="50" y="230" width="60" height="140"/>
+    
+    <!-- Right penalty area -->
+    <rect x="630" y="180" width="120" height="240"/>
+    <rect x="690" y="230" width="60" height="140"/>
+    
+    <!-- Left goal -->
+    <rect x="30" y="260" width="20" height="80" fill="#FFFFFF"/>
+    
+    <!-- Right goal -->
+    <rect x="750" y="260" width="20" height="80" fill="#FFFFFF"/>
+    
+    <!-- Penalty spots -->
+    <circle cx="130" cy="300" r="5" fill="#FFFFFF"/>
+    <circle cx="670" cy="300" r="5" fill="#FFFFFF"/>
+    
+    <!-- Corner arcs -->
+    <path d="M 50 50 Q 60 50 60 60"/>
+    <path d="M 750 50 Q 740 50 740 60"/>
+    <path d="M 50 550 Q 60 550 60 540"/>
+    <path d="M 750 550 Q 740 550 740 540"/>
+  </g>
+  
+  <!-- xG zones overlay -->
+  <g opacity="0.2">
+    <rect x="630" y="230" width="60" height="140" fill="#EF4444"/>
+    <rect x="630" y="180" width="120" height="50" fill="#F59E0B"/>
+    <rect x="630" y="420" width="120" height="50" fill="#F59E0B"/>
+  </g>
+</svg>
+

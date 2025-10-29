@@ -1,0 +1,22 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bronze" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#CD7F32;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Badge background -->
+  <circle cx="60" cy="60" r="55" fill="url(#bronze)" stroke="#8B4513" stroke-width="3"/>
+  
+  <!-- Inner circle -->
+  <circle cx="60" cy="60" r="45" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Star -->
+  <path d="M 60 25 L 67 45 L 88 48 L 74 62 L 77 83 L 60 73 L 43 83 L 46 62 L 32 48 L 53 45 Z" 
+        fill="#FFFFFF" opacity="0.9"/>
+  
+  <!-- Level text -->
+  <text x="60" y="105" text-anchor="middle" font-size="14" font-weight="bold" fill="#8B4513">LEVEL 1</text>
+</svg>
+

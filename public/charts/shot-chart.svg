@@ -1,0 +1,47 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shot Chart Background -->
+  <rect width="600" height="400" fill="#F9FAFB"/>
+  
+  <!-- Grid -->
+  <g stroke="#E5E7EB" stroke-width="1">
+    <line x1="0" y1="100" x2="600" y2="100"/>
+    <line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="150" y1="0" x2="150" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="400"/>
+    <line x1="450" y1="0" x2="450" y2="400"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1F2937">Shot Efficiency by Zone</text>
+  
+  <!-- Bars -->
+  <g>
+    <!-- Corner 3 -->
+    <rect x="50" y="150" width="80" height="200" fill="#10B981" rx="4"/>
+    <text x="90" y="370" text-anchor="middle" font-size="14" fill="#6B7280">Corner 3</text>
+    <text x="90" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#10B981">45%</text>
+    
+    <!-- Wing 3 -->
+    <rect x="180" y="180" width="80" height="170" fill="#3B82F6" rx="4"/>
+    <text x="220" y="370" text-anchor="middle" font-size="14" fill="#6B7280">Wing 3</text>
+    <text x="220" y="170" text-anchor="middle" font-size="16" font-weight="bold" fill="#3B82F6">38%</text>
+    
+    <!-- Mid-Range -->
+    <rect x="310" y="220" width="80" height="130" fill="#F59E0B" rx="4"/>
+    <text x="350" y="370" text-anchor="middle" font-size="14" fill="#6B7280">Mid-Range</text>
+    <text x="350" y="210" text-anchor="middle" font-size="16" font-weight="bold" fill="#F59E0B">32%</text>
+    
+    <!-- Paint -->
+    <rect x="440" y="100" width="80" height="250" fill="#8B5CF6" rx="4"/>
+    <text x="480" y="370" text-anchor="middle" font-size="14" fill="#6B7280">Paint</text>
+    <text x="480" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#8B5CF6">65%</text>
+  </g>
+  
+  <!-- Y-axis labels -->
+  <text x="20" y="105" font-size="12" fill="#6B7280">100%</text>
+  <text x="30" y="205" font-size="12" fill="#6B7280">50%</text>
+  <text x="30" y="305" font-size="12" fill="#6B7280">25%</text>
+  <text x="35" y="355" font-size="12" fill="#6B7280">0%</text>
+</svg>
+

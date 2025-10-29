@@ -369,6 +369,21 @@ export default function DashboardPage() {
               </CardContent>
             </Card>
 
+            {/* Learning Progress Chart */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Your Learning Journey</CardTitle>
+                <CardDescription>Weekly progress over time</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <img
+                  src="/charts/progress-chart.svg"
+                  alt="Learning Progress Chart"
+                  className="w-full h-auto rounded-lg"
+                />
+              </CardContent>
+            </Card>
+
             {/* Recent Achievements */}
             <Card>
               <CardHeader>
@@ -376,12 +391,12 @@ export default function DashboardPage() {
               </CardHeader>
               <CardContent className="space-y-3">
                 {[
-                  { title: "First Module Complete", icon: "🎯", date: "2 days ago" },
-                  { title: "7 Day Streak", icon: "🔥", date: "Today" },
-                  { title: "Video Analysis Pro", icon: "🎬", date: "1 week ago" },
+                  { title: "Level 3 Master", badge: "/badges/level-3.svg", date: "2 days ago" },
+                  { title: "Level 2 Achiever", badge: "/badges/level-2.svg", date: "1 week ago" },
+                  { title: "Level 1 Starter", badge: "/badges/level-1.svg", date: "2 weeks ago" },
                 ].map((achievement, i) => (
-                  <div key={i} className="flex items-center gap-3 p-3 rounded-lg bg-muted/50">
-                    <div className="text-2xl">{achievement.icon}</div>
+                  <div key={i} className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 hover:border-primary/30 transition-colors">
+                    <img src={achievement.badge} alt={achievement.title} className="w-12 h-12" />
                     <div className="flex-1">
                       <p className="text-sm font-medium">{achievement.title}</p>
                       <p className="text-xs text-muted-foreground">{achievement.date}</p>

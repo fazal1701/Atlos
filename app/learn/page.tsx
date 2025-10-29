@@ -60,11 +60,20 @@ export default function LearnPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredModules.map((module) => (
             <Card key={module.id} className="flex flex-col hover:border-primary/50 transition-colors overflow-hidden group">
-              {/* Module Preview Image/Icon */}
+              {/* Module Preview Image/Icon - Sport-Specific */}
               <div className="h-40 bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
+                {/* Sport field background based on module title */}
+                {module.title.toLowerCase().includes('basketball') || module.title.toLowerCase().includes('shot') ? (
+                  <img src="/sports/basketball-court.svg" alt="Basketball" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+                ) : module.title.toLowerCase().includes('baseball') || module.title.toLowerCase().includes('run') ? (
+                  <img src="/sports/baseball-field.svg" alt="Baseball" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+                ) : module.title.toLowerCase().includes('soccer') || module.title.toLowerCase().includes('goal') ? (
+                  <img src="/sports/soccer-field.svg" alt="Soccer" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+                ) : null}
+
+                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/5 to-transparent">
                   {/* Icon based on module category */}
-                  <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-20 h-20 rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
                     {module.category === "Analytics" && <BarChart3 className="w-10 h-10 text-primary" />}
                     {module.category === "Coaching" && <Users className="w-10 h-10 text-primary" />}
                     {module.category === "Business" && <Briefcase className="w-10 h-10 text-primary" />}
@@ -72,12 +81,6 @@ export default function LearnPage() {
                       <BookOpen className="w-10 h-10 text-primary" />
                     )}
                   </div>
-                </div>
-                {/* Decorative pattern */}
-                <div className="absolute inset-0 opacity-5">
-                  <div className="absolute inset-0" style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E")`,
-                  }}></div>
                 </div>
               </div>
 

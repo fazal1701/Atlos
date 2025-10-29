@@ -17,6 +17,7 @@ const discussions = [
     id: 1,
     author: "Sarah Chen",
     avatar: "SC",
+    avatarImage: "/avatars/athlete-1.svg",
     title: "Best tools for tracking shooting percentages?",
     content: "I'm looking for recommendations on tools or apps to track shooting percentages during practice...",
     category: "Analytics",
@@ -29,6 +30,7 @@ const discussions = [
     id: 2,
     author: "Marcus Johnson",
     avatar: "MJ",
+    avatarImage: "/avatars/athlete-2.svg",
     title: "How to break down game film effectively?",
     content: "What's your process for analyzing game footage? Looking for tips on what to focus on...",
     category: "Video Analysis",
@@ -41,6 +43,7 @@ const discussions = [
     id: 3,
     author: "Emily Rodriguez",
     avatar: "ER",
+    avatarImage: "/avatars/athlete-3.svg",
     title: "Career advice: Analytics vs. Coaching path?",
     content: "I'm torn between pursuing analytics or coaching. Would love to hear from people in both fields...",
     category: "Career",
@@ -231,14 +234,16 @@ export default function CommunityPage() {
                     <Card key={discussion.id} className="hover:border-primary/50 transition-colors cursor-pointer group overflow-hidden">
                       <CardContent className="pt-6">
                         <div className="flex gap-4">
-                          {/* Enhanced Avatar with Gradient Ring */}
+                          {/* Enhanced Avatar with Gradient Ring and Image */}
                           <div className="relative flex-shrink-0">
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-sm group-hover:blur-md transition-all"></div>
-                            <Avatar className="w-12 h-12 relative border-2 border-background">
-                              <AvatarFallback className="bg-gradient-to-br from-primary/20 to-primary/10 text-primary font-bold">
-                                {discussion.avatar}
-                              </AvatarFallback>
-                            </Avatar>
+                            <div className="w-12 h-12 relative border-2 border-background rounded-full overflow-hidden bg-white">
+                              <img
+                                src={discussion.avatarImage}
+                                alt={discussion.author}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
                             {/* Online indicator for some users */}
                             {index % 3 === 0 && (
                               <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-background"></div>

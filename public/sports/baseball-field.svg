@@ -1,0 +1,50 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Baseball Field -->
+  <defs>
+    <radialGradient id="grass" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <rect width="800" height="600" fill="url(#grass)"/>
+  
+  <!-- Infield dirt -->
+  <path d="M 400 500 L 200 300 L 400 100 L 600 300 Z" fill="#D97706" opacity="0.7"/>
+  
+  <!-- Field Lines -->
+  <g stroke="#FFFFFF" stroke-width="3" fill="none">
+    <!-- Foul lines -->
+    <line x1="400" y1="500" x2="100" y2="200"/>
+    <line x1="400" y1="500" x2="700" y2="200"/>
+    
+    <!-- Outfield arc -->
+    <path d="M 100 200 Q 400 50 700 200"/>
+    
+    <!-- Base paths -->
+    <line x1="400" y1="500" x2="200" y2="300"/>
+    <line x1="200" y1="300" x2="400" y2="100"/>
+    <line x1="400" y1="100" x2="600" y2="300"/>
+    <line x1="600" y1="300" x2="400" y2="500"/>
+  </g>
+  
+  <!-- Bases -->
+  <g fill="#FFFFFF">
+    <rect x="395" y="495" width="10" height="10" transform="rotate(45 400 500)"/>
+    <rect x="195" y="295" width="10" height="10" transform="rotate(45 200 300)"/>
+    <rect x="395" y="95" width="10" height="10" transform="rotate(45 400 100)"/>
+    <rect x="595" y="295" width="10" height="10" transform="rotate(45 600 300)"/>
+  </g>
+  
+  <!-- Pitcher's mound -->
+  <circle cx="400" cy="400" r="15" fill="#D97706" stroke="#FFFFFF" stroke-width="2"/>
+  
+  <!-- Run expectancy zones -->
+  <g opacity="0.3">
+    <text x="200" y="320" fill="#FFFFFF" font-size="14" font-weight="bold">1B</text>
+    <text x="400" y="120" fill="#FFFFFF" font-size="14" font-weight="bold">2B</text>
+    <text x="600" y="320" fill="#FFFFFF" font-size="14" font-weight="bold">3B</text>
+    <text x="400" y="520" fill="#FFFFFF" font-size="14" font-weight="bold">HOME</text>
+  </g>
+</svg>
+
